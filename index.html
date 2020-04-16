@@ -1,0 +1,143 @@
+<html>
+
+    <head>
+        <title>YTS - Browse & Search</title>
+
+        <link rel="manifest" href="/manifest.json">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="images/apple-icon-167.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120.png">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2388-1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2224-1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2048-1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2688-1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2436-1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1792-828.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-2208-1242.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="images/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+        <style>
+            body {
+                color:white;
+                background-color: black;
+                font-family: 'Montserrat', sans-serif;
+            }
+            a {
+                color:cyan;
+                font-weight:bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>YTS - Browse & Search</h2>
+        <input id="Title" placeholder="Movie Title"></input>
+
+        <select id="minimum_rating" onchange="Browse()">
+            <option value="0" selected="selected">Min. Rating (0)</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+
+          <select id="quality" onchange="Browse()">
+            <option value="720p" selected="selected">Quality (720p)</option>
+            <option value="1080p">1080p</option>
+            <option value="2160p">2160p</option>
+            <option value="3D">3D</option>
+          </select>
+
+          <select id="sort" onchange="Browse()">
+            <option value="year" selected="selected">Sort By (year)</option>
+            <option value="title">title</option>
+            <option value="rating">rating</option>
+            <option value="peers">peers</option>
+            <option value="seeds">seeds</option>
+            <option value="download_count">download_count</option>
+            <option value="like_count">like_count</option>
+            <option value="date_added">date_added</option>
+          </select>
+
+        <script> document.onreadystatechange = () => {
+                if (document.readyState === 'complete') { Browse(); }
+            };
+        </script>
+        <div id="BrowseResults"></div>
+
+        <div style="height:100px;width:100%;"> </div>
+
+        <script>
+            var SearchTxt = document.getElementById("Title");
+            var RatingValue = document.getElementById("minimum_rating");
+            var QualityValue = document.getElementById("quality");
+            var SortValue = document.getElementById("sort");
+
+            function Browse() {                
+                var node = document.getElementById("BrowseResults");
+                node.innerHTML = "<h3 style=\"color:red;\">LOADING...</h3>";
+                let url = 'https://yts.mx/api/v2/list_movies.json?limit=50&page=1&sort_by=' + SortValue.value + '&quality=' + QualityValue.value + '&minimum_rating=' + RatingValue.value + '&query_term=' + SearchTxt.value;
+                fetch(url)
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (json) {
+                        node.innerHTML = "<h3>Found " + json.data.movie_count + " Movies</h3>";
+                        json.data.movies.forEach(function (item, index) {
+                            node.innerHTML += "<h3>" + item.title_long + " - [RATED:" + item.rating + "]</h3>";
+                            item.torrents.forEach(function (tor_item, index2) {
+                                node.innerHTML += " [<a href=\"" + tor_item.url + "\">" + tor_item.quality + "</a>]";
+                            });
+                        });
+                        //node.innerHTML = JSON.stringify(json, null, '\t'); // DEBUG: Show all information.
+                    })
+            };
+
+            SearchTxt.addEventListener("keyup", function (e) {
+                if (e.keyCode === 13) {
+                    Browse();
+                }
+            });
+        </script>
+
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker.register("/pwabuilder-sw.js").then((reg) => {
+                        console.log("Service worker registered.", reg);
+                    });
+                });
+            }
+        </script>
+        <script type="module">
+            import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
+
+            const el = document.createElement("pwa-update");
+            document.body.appendChild(el);
+        </script>
+    </body>
+
+</html>
