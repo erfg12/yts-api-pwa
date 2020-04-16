@@ -48,10 +48,10 @@
     </head>
 
     <body>
-        <h2>YTS - Browse & Search</h2>
-        <input id="Title" placeholder="Movie Title"></input>
+        <h2 style="font-size:45px;">YTS - Browse & Search</h2>
+        <input id="Title" placeholder="Movie Title" style="font-size:45px;width:100%;"></input>
 
-        <select id="minimum_rating" onchange="Browse()">
+        <select id="minimum_rating" onchange="Browse()" style="font-size:45px;margin:15px;">
             <option value="0" selected="selected">Min. Rating (0)</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -64,14 +64,14 @@
             <option value="9">9</option>
           </select>
 
-          <select id="quality" onchange="Browse()">
+          <select id="quality" onchange="Browse()" style="font-size:45px;margin:15px;">
             <option value="720p" selected="selected">Quality (720p)</option>
             <option value="1080p">1080p</option>
             <option value="2160p">2160p</option>
             <option value="3D">3D</option>
           </select>
 
-          <select id="sort" onchange="Browse()">
+          <select id="sort" onchange="Browse()" style="font-size:45px;margin:15px;">
             <option value="year" selected="selected">Sort By (year)</option>
             <option value="title">title</option>
             <option value="rating">rating</option>
