@@ -3,7 +3,7 @@
   "name": "YTS - Search and Browse",
   "scope": "/",
   "display": "standalone",
-  "start_url": "https://MYWEBSITE.com",
+  "start_url": "https://newagesoldier.com/yts-api-pwa",
   "short_name": "YTS",
   "theme_color": "transparent",
   "description": "This is a PWA",
@@ -25,6 +25,6 @@
       "purpose": "maskable any"
     }
   ],
-  "url": "https://MYWEBSITE.com",
+  "url": "https://newagesoldier.com/yts-api-pwa",
   "screenshots": []
 }
